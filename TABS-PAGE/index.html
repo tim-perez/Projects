@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
+  <title>TABS PAGE</title>
+</head>
+<body>
+  <div class="container">
+    <div class="title">
+      <h1>Messi</h1>
+      <p>Welcome to a Tab Practice Page featuring Lionel Messi</p>
+    </div>
+    <div class="tabs-container">
+      <div class="tab-images">
+        <img class="tab-image active" id="Argentina" src="./images/argentina.jpg" alt="Picture of Messi winning the World Cup with Argentina">
+        <img class="tab-image" id="Miami" src="./images/miami.jpg" alt="Picture of Messi winning the League Cup with Inter Miami">
+        <img class="tab-image" id="Barcelona" src="./images/barcelona.jpg" alt="Picture of Messi winning the Champions League with Barcelona">
+      </div>
+      <div class="tab">
+        <div class="button-container">
+          <button class="tab-button active" id="Argentina">Argentina</button>
+          <button class="tab-button" id="Barcelona">Barcelona</button>
+          <button class="tab-button" id="Miami">Inter Miami</button>
+        </div>
+        <div class="tab-content">
+          <div class="content active" id="Argentina">
+            <h4>Argentina</h4>
+            <p>Winning the world cup with Argentina.</p>
+          </div>
+          <div class="content" id="Barcelona">
+            <h4>Barcelona</h4>
+            <p>Winning the Champions League with Barcelona.</p>
+          </div>
+          <div class="content" id="Miami">
+            <h4>Inter Miami</h4>
+            <p>Winning the League Cup with Inter Miami.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./scripts.js"></script>
+</body>
+</html>
