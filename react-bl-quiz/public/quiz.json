@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "question": "Who is NOT a member of Team Z?",
+    "options": [
+      "Isagi",
+      "Nagi",
+      "Bachira",
+      "Chigiri"
+    ],
+    "image": "./images/TeamZ.png",
+    "answer": "Nagi"
+  },
+  {
+    "id": 2,
+    "question": "Who scored the FINAL goal against Team V?",
+    "options": [
+      "Isagi",
+      "Kunigami",
+      "Bachira",
+      "Chigiri"
+    ],
+    "image": "./images/DirectShot.png",
+    "answer": "Isagi"
+  },
+  {
+    "id": 3,
+    "question": "Which duo did Nagi team up with?",
+    "options": [
+      "Isagi and Bachira",
+      "Reo and Zantetsu",
+      "Chigiri and Kunigami",
+      "Reo and Isagi"
+    ],
+    "image": "./images/Duo.jpeg",
+    "answer": "Isagi and Bachira"
+  },
+  {
+    "id": 4,
+    "question": "Who survived by having the most goals in their team?",
+    "options": [
+      "Isagi",
+      "Igarashi",
+      "Barou",
+      "Gagamaru"
+    ],
+    "image": "./images/Barou.png",
+    "answer": "Barou"
+  },
+  {
+    "id": 5,
+    "question": "Who's considered the number one after the first selection?",
+    "options": [
+      "Isagi",
+      "Bachira",
+      "Nagi",
+      "Rin"
+    ],
+    "image": "./images/Rin.jpeg",
+    "answer": "Rin"
+  },
+  {
+    "id": 6,
+    "question": "Who did Rin choose to steal?",
+    "options": [
+      "Isagi",
+      "Nagi",
+      "Chigiri",
+      "Barou"
+    ],
+    "image": "./images/Steal.png",
+    "answer": "Isagi"
+  },
+  {
+    "id": 7,
+    "question": "What did Isagi call Barou?",
+    "options": [
+      "Superstar",
+      "Genius",
+      "Donkey",
+      "World-Class"
+    ],
+    "image": "./images/Donkey.png",
+    "answer": "Donkey"
+  },
+  {
+    "id": 8,
+    "question": "What puzzle piece did Rin use to score the final point?",
+    "options": [
+      "Lefty",
+      "Direct Shot",
+      "Curve Shot",
+      "Luck"
+    ],
+    "image": "./images/Luck.jpg",
+    "answer": "Luck"
+  },
+  {
+    "id": 9,
+    "question": "How did Isagi score his goal on Rin?",
+    "options": [
+      "Bicycle Kick",
+      "Backheel",
+      "Header",
+      "Lefty"
+    ],
+    "image": "./images/Backheel.jpeg",
+    "answer": "Backheel"
+  },
+  {
+    "id": 10,
+    "question": "Who knocked out Kunigami from Blue Lock?",
+    "options": [
+      "Shidou",
+      "Yukimiya",
+      "Otoya",
+      "Karasu"
+    ],
+    "image": "./images/Shidou.png",
+    "answer": "Shidou"
+  }
+]
