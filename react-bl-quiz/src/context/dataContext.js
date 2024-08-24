@@ -86,6 +86,7 @@ export const DataProvider = ({ children }) => {
     setSelectedAnswer('');
     setQuestionIndex(0);
     setScore(0);
+    setHasAnswered(false);
   }
 
   return (
