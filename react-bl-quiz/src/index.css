@@ -1,22 +1,32 @@
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
-      'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
-      'Helvetica Neue', sans-serif;
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  letter-spacing: 0.5px;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-      monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap');
 
 * {
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
   font-family: "New Amsterdam", sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 0.5px;
 }
 
 .App {
@@ -25,50 +35,61 @@ code {
   align-items: center;
   height: 100vh;
   background-color: rgb(0, 136, 255);
+  padding: 20px;
+  overflow: hidden;
 }
 
 .container {
   display: flex;
   flex-direction: column;
   background-color: rgb(224, 224, 224);
-  padding: 20px;
+  padding: 2rem;
   border-radius: 4px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
-  width: 600px;
+  width: 80%;
+  max-width: 600px;
   max-height: 80vh;
-
+  overflow-y: auto; 
+  overflow-x: hidden; 
 }
 
 .image-container {
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
+  width: 100%;
 }
 
 .image-container img {
   width: 100%;
-  max-width: 450px;
+  max-width: 100%;
+  height: auto; 
   border-radius: 4px;
 }
 
 .question-container {
   display: flex;
-  justify-content: space-evenly;
+  width: 100%;
+  justify-content: space-between;
   align-items: center;
+  padding: 10px 0;
 }
 
-.choices-container{
+.choices-container {
   display: flex;
   justify-content: space-evenly;
-  width: 5;
+  width: 100%;
+  flex-wrap: wrap; 
   padding: 10px;
   border-radius: 4px;
+  overflow: hidden;
 }
 
 .next-question-container {
   display: flex;
   justify-content: flex-end;
   padding: 10px;
+  width: 100%;
 }
 
 .next-question-container button {
@@ -79,6 +100,7 @@ code {
   color: #f5f5f5;
   cursor: pointer;
   transition: 1s all ease;
+  font-size: 1rem;
 }
 
 .next-question-container button:hover {
@@ -90,26 +112,29 @@ code {
   font-weight: bold;
 }
 
-.choices-container button{
+.choices-container button {
   padding: 20px;
   margin: 10px;
-  font-size: 1.5rem;
+  font-size: 1.8rem; 
   color: #f5f5f5;
   border: none;
   border-radius: 4px;
   background-color: rgb(0, 136, 255);
   transition: 1s all ease;
   cursor: pointer;
+  flex: 1 1 45%; 
+  max-width: 200px; 
+  overflow: hidden; 
 }
 
-.choices-container button:hover{
+.choices-container button:hover {
   background-color: rgb(0, 54, 108);
   transform: scale(1.1);
 }
 
 .choices-container button.selected {
   transform: scale(1.1);
-  background-color: rgb(0, 54, 108); 
+  background-color: rgb(0, 54, 108);
 }
 
 .title-container {
@@ -123,6 +148,7 @@ code {
 .title-container h1 {
   font-size: 2rem;
   color: rgb(0, 136, 255);
+  margin-bottom: 10px;
 }
 
 .title-container img {
@@ -132,14 +158,14 @@ code {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
-
-.start-container {
+.start-button-container {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  padding: 1rem;
+  align-items: center;
 }
 
-.start-container button {
+.start-button-container button {
   padding: 10px;
   border: none;
   border-radius: 4px;
@@ -150,8 +176,15 @@ code {
   animation: scaleUpDown 2s infinite;
 }
 
-.start-container button:hover {
+.start--button-container button:hover {
   background-color: rgb(0, 54, 108);
+}
+
+.container-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 @keyframes scaleUpDown {
@@ -160,5 +193,17 @@ code {
   }
   50% {
     transform: scale(1.2);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    max-height: 90vh;
+    padding: 15px;
+  }
+
+  .choices-container button {
+    font-size: 1.5rem;
   }
 }

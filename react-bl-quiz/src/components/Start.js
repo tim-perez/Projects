@@ -11,7 +11,7 @@ const Start = () => {
             <h1>Welcome to the Blue Lock Quiz</h1>
             <img src="images/Title.jpeg" alt="title-image" />
           </div>
-          <div className="start-container">
+          <div className="start-button-container">
             <button onClick={startQuiz}>Start Quiz</button>
           </div>
         </div>

@@ -9,6 +9,7 @@ export const DataProvider = ({ children }) => {
   const [selectedAnswer, setSelectedAnswer] = useState('');
   const [score, setScore] = useState(0);
   const [correctAnswer, setCorrectAnswer] = useState('');
+  const [hasAnswered, setHasAnswered] = useState(false); 
 
   const [showStart, setShowStart] = useState(true);
   const [showQuiz, setShowQuiz] = useState(false);
@@ -28,10 +29,15 @@ export const DataProvider = ({ children }) => {
     }
   }, [quiz, questionIndex]);
 
+  useEffect(() => {
+    if (correctAnswer !== question.answer) {
+      setCorrectAnswer(question.answer);
+    }
+  }, [question, correctAnswer]);
+
   const startQuiz = () => {
     setShowStart(false);
     setShowQuiz(true);
-    setCorrectAnswer(question.answer);
   }
 
   const handleSelection = () => { 
@@ -41,24 +47,34 @@ export const DataProvider = ({ children }) => {
     });
   }
 
-  const checkAnswer = (event, selected) => {
-    handleSelection();
 
-    if (selected) {
-      setSelectedAnswer(selected);
-      event.target.classList.add('selected');
-    }
-    if (selected === correctAnswer) {
-      event.target.classList.add('correct');
+  const checkAnswer = (event, selected) => {
+
+    handleSelection();
+    setSelectedAnswer(selected);
+    event.target.classList.add('selected');
+
+    if (selected === correctAnswer && hasAnswered === false ) {
+      setScore(score + 10);
+      setHasAnswered(true);
+    } else if (selected !== correctAnswer && hasAnswered === true){
+      setScore(score - 10);
+      setHasAnswered(false);
+    } else if (selected === correctAnswer && hasAnswered === true){
+      setScore(score);
     } else {
-      event.target.classList.add('wrong');
+      setScore(score);
     }
+    console.log(score);
+    console.log(hasAnswered);
   };
 
   const nextQuestion = () => {
     handleSelection();
-    setSelectedAnswer('');
     setQuestionIndex(questionIndex + 1);
+    setSelectedAnswer('');
+    setHasAnswered(false);
+    console.log(score);
   }
 
   const showTheResult = () => {
