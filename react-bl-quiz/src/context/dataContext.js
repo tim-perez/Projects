@@ -49,7 +49,6 @@ export const DataProvider = ({ children }) => {
 
 
   const checkAnswer = (event, selected) => {
-
     handleSelection();
     setSelectedAnswer(selected);
     event.target.classList.add('selected');
@@ -65,8 +64,6 @@ export const DataProvider = ({ children }) => {
     } else {
       setScore(score);
     }
-    console.log(score);
-    console.log(hasAnswered);
   };
 
   const nextQuestion = () => {
@@ -74,7 +71,6 @@ export const DataProvider = ({ children }) => {
     setQuestionIndex(questionIndex + 1);
     setSelectedAnswer('');
     setHasAnswered(false);
-    console.log(score);
   }
 
   const showTheResult = () => {
