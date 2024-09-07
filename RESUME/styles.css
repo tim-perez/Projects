@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: small;
+}
+
+html {
+  font-family: 'Times New Roman', Times, serif;
+  padding: 2rem;
+}
+
+body {
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+.personal-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 15px;
+}
+
+.personal-info ul {
+  display: flex;
+  gap: 20px;
+}
+
+.socials {
+  display: flex;
+  margin-right: 15px;
+}
+
+.socials-title{
+  display: flex;
+  flex-direction: column;
+  margin-right: 15px;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  background-color: lightgrey;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.school,
+.job,
+.project{
+  display: flex;
+  justify-content: space-between;
+}
+
+.job-description ul,
+.project-description ul {
+  margin-left: 25px;
+  margin-bottom: 5px;
+}
+
+.skills {
+  display: flex;
+}
+
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  margin-right: 20px;
+  align-items: flex-end;
+}
+
+#city {
+  list-style-type: none;
+}
+
+.masters,
+.relevant-coursework {
+  margin-bottom: 5px;
+}
